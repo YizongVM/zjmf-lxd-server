@@ -32,8 +32,7 @@ check_and_install() {
             exit 1
         fi
         if ! command -v $1 &> /dev/null; then
-            echo "安装 $1 失败，请手动安装后重试。(LXC安装指令:export PATH=$PATH:/snap/bin && alias lxc="/snap/bin/lxc" && echo 'export PATH=$PATH:/snap/bin' >> /root/.bashrc && echo 'alias lxc="/snap/bin/lxc"' >> /root/.bashrc
-)"
+            echo "安装 $1 失败，请手动安装后重试。(LXC安装指令:export PATH=$PATH:/snap/bin && alias lxc=\"/snap/bin/lxc\" && echo 'export PATH=$PATH:/snap/bin' >> /root/.bashrc && echo 'alias lxc=\"/snap/bin/lxc\"' >> /root/.bashrc)"
             exit 1
         fi
     fi
@@ -75,9 +74,10 @@ while true; do
     echo "  5) Fedora"
     echo "  6) openSUSE"
     echo "  7) RockyLinux"
+    echo "  8) Alpine"
     echo "  0) 退出"
     echo
-    read -p "请输入选项 [0-7]: " os_choice
+    read -p "请输入选项 [0-8]: " os_choice
 
     if [ "$os_choice" == "0" ]; then
         echo "退出脚本。"
@@ -177,6 +177,16 @@ while true; do
                 *) echo "无效选项，返回主菜单。"; read -p "按回车继续..." ; continue ;;
             esac
             ;;
+        8)
+            OS="alpine"
+            echo "请选择 Alpine 版本:"
+            echo "  1) 3.20"
+            read -p "请输入选项 [1]: " ver_choice
+            case $ver_choice in
+                1) VERSION="3-20" ;;
+                *) echo "无效选项，返回主菜单。"; read -p "按回车继续..." ; continue ;;
+            esac
+            ;;
         *)
             echo "无效选项，返回主菜单。"
             read -p "按回车继续..."
@@ -231,6 +241,7 @@ while true; do
             opensuse_tumbleweed)  FILENAME="opensusetumbleweed-amd64-ssh.tar.gz" ;;
             rockylinux_8)         FILENAME="rockylinux8-amd64-ssh.tar.gz" ;;
             rockylinux_9)         FILENAME="rockylinux9-amd64-ssh.tar.gz" ;;
+            alpine_3-20)          FILENAME="alpine3.20.tar.gz" ;;  # 新增 Alpine
             *)
                 echo "错误：不支持的 amd64 系统版本组合 ${OS}_${VERSION}"
                 read -p "按回车返回主菜单..."
