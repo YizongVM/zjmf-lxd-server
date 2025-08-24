@@ -20,7 +20,7 @@
 
 本人为此项目创建了一键脚本 下面是一键指令,执行前请先执行
 ```
-apt install curl wget bash -y
+apt install curl wget bash sudo -y
 ```
 一键指令：
 ```
