@@ -1,30 +1,16 @@
-
-
-
-
-# 此模块由Python进行编写
-
-
-
------
-
-
-
 # 魔方财务-LXD 对接插件 (zjmf-lxd-server)
 
 这是一个为 [魔方财务](https://www.idcsmart.com/) (ZJMF) 系统开发的 LXD 对接插件，旨在为主机商提供一套完整、自动化的 LXD 容器销售与管理解决方案。
 
 项目通过一个独立的后端服务与魔方财务插件相结合的模式，实现了高效、安全、功能丰富的 LXD 容器管理体验。
 
-**详细的使用文档，请参考 [项目 Wiki](https://github.com/StarVM-OpenSource/zjmf-lxd-server-fix/wiki/%E4%BD%BF%E7%94%A8%E5%B8%AE%E5%8A%A9)，安装使用如下指令按顺序执行即可，**
-
-本人为此项目创建了一键脚本 下面是一键指令,执行前请先执行
+一键指令,执行前请先执行
 ```
 apt install curl wget bash sudo -y
 ```
 一键指令：
 ```
-bash <(curl -sSL https://raw.githubusercontent.com/StarVM-OpenSource/zjmf-lxd-server-fix/refs/heads/main/install.sh)
+bash <(curl -sSL https://raw.githubusercontent.com/YizongVM/zjmf-lxd-server/refs/heads/main/install.sh)
 ```
 或者
 ```
@@ -32,6 +18,7 @@ curl -sSL https://raw.githubusercontent.com/StarVM-OpenSource/zjmf-lxd-server-fi
 ```
 
 -----
+
 
 ## 核心功能
 
@@ -41,7 +28,9 @@ curl -sSL https://raw.githubusercontent.com/StarVM-OpenSource/zjmf-lxd-server-fi
   * **Web 管理面板**：后端服务自带一个独立的 Web 管理界面，用于集中监控和管理所有创建的 LXD 容器，并提供快捷操作。
   * **安全隔离**：通过独立的 Python API 服务器 和 Token 认证机制，将 LXD 主机与魔方财务面板有效隔离，增强安全性。
 
+
 -----
+
 
 ## 项目截图
 
