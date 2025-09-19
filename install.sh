@@ -12,18 +12,18 @@ set -o pipefail
 # 使用关联数组存储脚本描述和URL，方便扩展
 declare -A SCRIPTS
 SCRIPTS=(
-    ["1"]="部署运行脚本环境;https://raw.githubusercontent.com/StarVM-OpenSource/zjmf-lxd-server-fix/refs/heads/main/shell/1.sh"
-    ["2"]="部署LXC环境并创建存储池;https://raw.githubusercontent.com/StarVM-OpenSource/zjmf-lxd-server-fix/refs/heads/main/shell/2.sh"
-    ["3"]="安装被控;https://raw.githubusercontent.com/StarVM-OpenSource/zjmf-lxd-server-fix/refs/heads/main/shell/3.sh"
-    ["4"]="开启BBR;https://raw.githubusercontent.com/StarVM-OpenSource/zjmf-lxd-server-fix/refs/heads/main/shell/4.sh"
-    ["5"]="开启&关闭SWAP;https://raw.githubusercontent.com/StarVM-OpenSource/zjmf-lxd-server-fix/refs/heads/main/shell/5.sh"
-    ["6"]="下载镜像;https://raw.githubusercontent.com/StarVM-OpenSource/zjmf-lxd-server-fix/refs/heads/main/shell/6.sh"
-    ["7"]="查看镜像列表;https://raw.githubusercontent.com/StarVM-OpenSource/zjmf-lxd-server-fix/refs/heads/main/shell/7.sh"
-    ["8"]="查看被控管理网页登录信息;https://raw.githubusercontent.com/StarVM-OpenSource/zjmf-lxd-server-fix/refs/heads/main/shell/8.sh"
-    ["9"]="获取魔方对接端口与对接密钥;https://raw.githubusercontent.com/StarVM-OpenSource/zjmf-lxd-server-fix/refs/heads/main/shell/9.sh"
-    ["10"]="设置未传递镜像时的默认镜像;https://raw.githubusercontent.com/StarVM-OpenSource/zjmf-lxd-server-fix/refs/heads/main/shell/10.sh"
-    ["11"]="开启zram;https://raw.githubusercontent.com/StarVM-OpenSource/zjmf-lxd-server-fix/refs/heads/main/shell/11.sh"
-    ["12"]="如提示lxc: command not found,执行此项获取手动安装指令;https://raw.githubusercontent.com/StarVM-OpenSource/zjmf-lxd-server-fix/refs/heads/main/shell/12.sh"
+    ["1"]="部署运行脚本环境;https://raw.githubusercontent.com/YizongVM/zjmf-lxd-server/refs/heads/main/shell/1.sh"
+    ["2"]="部署LXC环境并创建存储池;https://raw.githubusercontent.com/YizongVM/zjmf-lxd-server/refs/heads/main/shell/2.sh"
+    ["3"]="安装被控;https://raw.githubusercontent.com/YizongVM/zjmf-lxd-server/refs/heads/main/shell/3.sh"
+    ["4"]="开启BBR;https://raw.githubusercontent.com/YizongVM/zjmf-lxd-server/refs/heads/main/shell/4.sh"
+    ["5"]="开启&关闭SWAP;https://raw.githubusercontent.com/YizongVM/zjmf-lxd-server/refs/heads/main/shell/5.sh"
+    ["6"]="下载镜像;https://raw.githubusercontent.com/YizongVM/zjmf-lxd-server/refs/heads/main/shell/6.sh"
+    ["7"]="查看镜像列表;https://raw.githubusercontent.com/YizongVM/zjmf-lxd-server/refs/heads/main/shell/7.sh"
+    ["8"]="查看被控管理网页登录信息;https://raw.githubusercontent.com/YizongVM/zjmf-lxd-server/refs/heads/main/shell/8.sh"
+    ["9"]="获取魔方对接端口与对接密钥;https://raw.githubusercontent.com/YizongVM/zjmf-lxd-server/refs/heads/main/shell/9.sh"
+    ["10"]="设置未传递镜像时的默认镜像;https://raw.githubusercontent.com/YizongVM/zjmf-lxd-server/refs/heads/main/shell/10.sh"
+    ["11"]="开启zram;https://raw.githubusercontent.com/YizongVM/zjmf-lxd-server/refs/heads/main/shell/11.sh"
+    ["12"]="如提示lxc: command not found,执行此项获取手动安装指令;https://raw.githubusercontent.com/YizongVM/zjmf-lxd-server/refs/heads/main/shell/12.sh"
 )
 
 # --- 颜色定义 ---
