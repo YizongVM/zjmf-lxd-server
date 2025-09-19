@@ -14,7 +14,7 @@ bash <(curl -sSL https://raw.githubusercontent.com/YizongVM/zjmf-lxd-server/refs
 ```
 或者
 ```
-curl -sSL https://raw.githubusercontent.com/StarVM-OpenSource/zjmf-lxd-server-fix/refs/heads/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/YizongVM/zjmf-lxd-server/refs/heads/main/install.sh | bash
 ```
 
 -----
